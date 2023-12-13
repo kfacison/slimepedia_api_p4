@@ -42,26 +42,12 @@ API For the Dev to track slime and food info form Slime Rancher.
 ![All Page](assets/AllPage.png)
 ![Slime Page](assets/SlimePage.png)
 ![About](assets/About.png)
+![Edit Page](assets/EditPage.png)
 
-## Sprint Flow
-### Sprint 1
-* finish planing api and react wireframes
-* Learn TypeScript (YouTube, GeeksForGeeks, w3schools)
-### Sprint 2
-* stub up app compents
-* simple css
-### Sprint 3
-* Slime and Food CR fucntionality
-* Debug as needed
-### Sprint 4
-* Slime and Food UD functionality
-* Debug as needed
-### Sprint 5
-* Code clean up
-* ReadMe Clean up
-## Sprint 6
-* Refator
-* Streach goals
+## User Stories
+* As a user I want to be able to see a list of all Slimes/food in the database
+* As a user I want to see the info of a Slime/Food
+* As a user I want to CRUD Slimes/Food
 
 ## MVP Checklist
 * Slime CRUD
@@ -73,6 +59,26 @@ API For the Dev to track slime and food info form Slime Rancher.
 * User Auth
 * Google oAuth
 * Locactions : Slime(M:N) & Location : Food(M:N)
+
+## Sprint Flow
+### Sprint 1
+* Finish planing api and react wireframes
+* Learn TypeScript (YouTube, GeeksForGeeks, w3schools)
+### Sprint 2
+* Stub up app compents
+* Simple css
+### Sprint 3
+* Slime and Food CR fucntionality
+* Debug as needed
+### Sprint 4
+* Slime and Food UD functionality
+* Debug as needed
+### Sprint 5
+* Code clean up
+* ReadMe Clean up
+### Sprint 6
+* Refator
+* Streach goals
 
 ## Maybe Roadblocks
 * Feature creep
