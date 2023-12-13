@@ -13,7 +13,7 @@ API For the Dev to track slime and food info form Slime Rancher.
 ## ERD
 * Slime : Food (1:1)
 
-<!-- ![ERD](assets/ERD.drawio.png) -->
+![ERD](<assets/ERD.png>)
 
 ## Restful Routing Chart
 | HTTP METHOD (_Verb_) | URL (_Nouns_) | CRUD   | Response                                     |
@@ -38,6 +38,10 @@ API For the Dev to track slime and food info form Slime Rancher.
 
 
 ## WireFrame
+![Homepage](assets/Home.png)
+![All Page](assets/AllPage.png)
+![Slime Page](assets/SlimePage.png)
+![About](assets/About.png)
 
 ## Sprint Flow
 ### Sprint 1
