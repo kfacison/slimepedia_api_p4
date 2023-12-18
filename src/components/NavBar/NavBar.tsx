@@ -4,7 +4,7 @@ import './NavBar.css';
 
 export default function NavBar(){
     return (
-        <div>
+        <div className="sideNav">
             <Link to="/" className="nav-links">Home</Link>
             <Link to="/slimes" className="nav-links">Slimes</Link>
             <Link to="/foods" className="nav-links">Foods</Link>

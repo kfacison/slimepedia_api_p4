@@ -1,4 +1,19 @@
+.sideNav{
+    padding-top: 20px;
+}
+
 .nav-links{
     width: 75px;
     height: 50px;
+    color: #dd4063;
+    text-decoration: none;
 }
+
+.nav-links:hover {
+    color: #0d6ba0;
+}
+
+.nav-links:active {
+    color: #3e218b;
+}
+
