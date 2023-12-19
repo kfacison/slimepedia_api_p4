@@ -1,5 +1,6 @@
 import './NewSlimePage.css';
 import { useState, useEffect } from "react";
+import * as slimeApi from '../../utilities/slime-api';
 
 export default function NewSlimePage(){
     const allLocations: {placeName: string} []= [
@@ -54,7 +55,8 @@ export default function NewSlimePage(){
     async function handleSubmit(evt: any) {
         evt.preventDefault();
     
-        const formData = new FormData(evt.target);
+        const NewSlimeData = formData;
+        
     
         try {
             
@@ -66,13 +68,14 @@ export default function NewSlimePage(){
     return (
         <>
         <h2>New Slime Page</h2>
-        <form  onSubmit={handleSubmit} method="post">
+        <form autoComplete="off" onSubmit={handleSubmit} >
         <div>
             <label htmlFor="name">Name:</label>
             <input
                 type="text"
                 id="name"
                 name="name"
+                required
                 value={formData.name}
                 onChange={handleChange}
             />
@@ -151,6 +154,8 @@ export default function NewSlimePage(){
                 value={formData.favFood}
                 onChange={handleChange}
             >
+                {/* based on the diet type the options should be all that posible foods in that catigory */}
+                {/* map() for every food that is returned in a api of get food catigoty */}
                 <option value="other">Other</option>
             </select>
         </div>
@@ -165,6 +170,10 @@ export default function NewSlimePage(){
                 value={formData.favToy}
                 onChange={handleChange}
             />
+        </div>
+
+        <div>
+            <button type="submit">Add New Slime</button>
         </div>
 
         </form>

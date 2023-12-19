@@ -1,28 +1,5 @@
 import { Schema, model } from 'mongoose';
-
-enum foodTypes{
-    fruit = 'fruit',
-    veggies = 'veggies',
-    meat = 'meat',
-    other = 'other'
-}
-
-enum locationFound{
-    dryReef  = 'Dry Reef',
-    indigoQuarry ='Indigo Quarry',
-    mossBlanket ='Moss Blanket',
-    ancientRuins = 'Ancient Ruins',
-    glassDesert = 'Glass Desert',
-    other = 'other'
-}
-
-interface Food{
-    name: string;
-    type: foodTypes;
-    location: [locationFound];
-    growTime: number;
-    harvetQuantity: number;
-}
+import { Food, dietTypes, locationFound } from '../interface/types';
 
 const foodSchema = new Schema<Food>({
     name: { 
@@ -31,7 +8,7 @@ const foodSchema = new Schema<Food>({
     },
     type: {
         type: String, 
-        enum: foodTypes
+        enum: dietTypes
     },
     location: [{
         type: String,
