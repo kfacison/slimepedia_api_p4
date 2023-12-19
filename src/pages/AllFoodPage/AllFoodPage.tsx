@@ -1,4 +1,4 @@
-export default function HomePage(){
+export default function AllFoodPage(){
     return (
         <h2>
             all food page
