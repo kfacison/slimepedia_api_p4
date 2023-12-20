@@ -31,10 +31,10 @@ export default function AllSlimePage(){
         <div className='allSlime'>
         <h2>all slime page</h2>
         { allSlimes.map((slime, idx)=>(
-        <Link to={'/slimes/'+slime._id} key={idx}>{slime.name + " slime"}</Link>))
+        <Link to={'/slimes/'+slime._id} key={idx} className='SlimeLink'>{slime.name + " slime"}</Link>))
         }
+        <Link to='/slimes/new' className='newSlimeLink'>Add New Slime</Link>
         </div>
-        <Link to='/slimes/new'>Add New Slime</Link>
         </>
     );
 }

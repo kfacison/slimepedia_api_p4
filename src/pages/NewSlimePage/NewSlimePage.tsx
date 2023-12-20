@@ -70,8 +70,8 @@ export default function NewSlimePage(){
     return (
         <>
         <h2>New Slime Page</h2>
-        <form autoComplete="off" onSubmit={handleSubmit} >
-        <div>
+        <form autoComplete="off" onSubmit={handleSubmit}  className='slimeForm'>
+        <div className='formName'>
             <label htmlFor="name">Name:</label>
             <input
                 type="text"
@@ -83,7 +83,7 @@ export default function NewSlimePage(){
             />
         </div>
 
-        <div>
+        <div className='formPlort'>
             <label htmlFor="plort">Plort:</label>
             <input
                 type="text"
@@ -95,7 +95,7 @@ export default function NewSlimePage(){
             />
         </div>
 
-        <div>
+        <div className='formBehavior'>
             <label htmlFor="behavior">Behavior Type:</label>
             <select
                 id="behavior"
@@ -110,7 +110,7 @@ export default function NewSlimePage(){
             </select>
         </div>
 
-        <div>
+        <div className='formDiet'>
             <label htmlFor="diet">Diet Type:</label>
             <select
                 id="diet"
@@ -125,7 +125,7 @@ export default function NewSlimePage(){
             </select>
         </div>
 
-        <div>
+        <div className='formLocation'>
             <fieldset onChange={handleChange}>
                 <legend>Location:</legend>
                     <input type="checkbox" name="location" value={0} />
@@ -148,7 +148,7 @@ export default function NewSlimePage(){
             </fieldset>
         </div>
 
-        <div>
+        <div className='formFavFood'>
             <label htmlFor="favFood">Favorite Food:</label>
             <input
                 type='text'
@@ -159,7 +159,7 @@ export default function NewSlimePage(){
             />
         </div>
 
-        <div>
+        <div className='formFavToy'>
             <label htmlFor="favToy">Favorite Toy:</label>
             <input
                 type="text"
@@ -172,7 +172,7 @@ export default function NewSlimePage(){
         </div>
 
         <div>
-            <button type="submit">Add New Slime</button>
+            <button type="submit" className='formButton'>Add New Slime</button>
         </div>
 
         </form>
