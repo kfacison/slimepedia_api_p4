@@ -61,8 +61,7 @@ export default function NewSlimePage(){
             console.log(NewSlimeData);
             const newSlime = await slimeApi.createSlime(NewSlimeData);
             console.log(newSlime);
-            // return navigate("/slimes/" + newSlime._id);
-            return navigate("/slimes/");
+            return navigate("/slimes/" + newSlime._id);
         } catch (error) {
             console.error("Error during form submission", error);
         }
