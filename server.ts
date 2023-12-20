@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 import path from "path";
 import favicon from "serve-favicon";
 import logger from "morgan";
-import router  from "./routes/api/slimes";
+import slimeRouter from "./routes/api/slimes";
+// import foodRouter from "./routes/api/foods";
 
 // const express = require('express');
 // const path = require('path');
@@ -36,7 +37,8 @@ console.log(`Express app running on port ${port}`)
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
-app.use("/api/slimes", router);
+app.use("/api/slimes", slimeRouter);
+// app.use("/api/foods", foodsRouter);
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests

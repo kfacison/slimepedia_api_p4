@@ -5,10 +5,11 @@ import * as Types from "../../types/types";
 
 export async function getAll(req: Request, res: Response): Promise<void> {
     try {
-        const profiles = await Slime.find({});
-        res.status(200).json(profiles);
+        const allSlimesInfo = await Slime.find({},{_id:1, name:1});
+        // console.log(allSlimesInfo);
+        res.status(200).json(allSlimesInfo);
     } catch (error) {
-        res.status(500).send("Failed to return all profiles");
+        res.status(500).send("Failed to return all slimes");
     }
 }
 
@@ -48,8 +49,9 @@ export async function deleteSlime(req: Request<{id: string}>, res: Response): Pr
 export async function getSlime(req: Request<{id: string}> , res: Response): Promise<void> {
     try {
 
-        const slime = await Slime.findOne({ _id: req.params.id }).populate('food');
-
+        const slime = await Slime.findOne({ _id: req.params.id });
+        // const slime = await Slime.findOne({ _id: req.params.id }).populate('food');
+        console.log(slime)
         res.json(slime);
 
     } catch (error) {

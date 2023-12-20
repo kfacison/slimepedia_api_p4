@@ -10,8 +10,8 @@ export function getAll(): Promise<any> {
 }
 
 // Retrieve slime
-export function getSlime(slime: { _id?: string }): Promise<any> {
-    return sendRequest(`${BASE_URL}/${slime?._id}`);
+export function getSlime(id?: string ): Promise<any> {
+    return sendRequest(`${BASE_URL}/${id}`);
 }
 
 // Create a slime
@@ -25,6 +25,6 @@ export function update(formData: { _id: string }): Promise<any> {
 }
 
 // Delete slime
-export function deleteSlime(slime: { _id?: string }): Promise<any> {
-    return sendRequest(`${BASE_URL}/${slime?._id}`, "DELETE");
+export function deleteSlime(id?: string ): Promise<any> {
+    return sendRequest(`${BASE_URL}/${id}`, "DELETE");
 }

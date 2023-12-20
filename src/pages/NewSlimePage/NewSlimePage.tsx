@@ -58,9 +58,9 @@ export default function NewSlimePage(){
         evt.preventDefault();
         try {
             const NewSlimeData = formData;
-            console.log(NewSlimeData);
+            // console.log(NewSlimeData);
             const newSlime = await slimeApi.createSlime(NewSlimeData);
-            console.log(newSlime);
+            // console.log(newSlime);
             return navigate("/slimes/" + newSlime._id);
         } catch (error) {
             console.error("Error during form submission", error);

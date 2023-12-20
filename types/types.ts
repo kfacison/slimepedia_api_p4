@@ -28,7 +28,7 @@ export interface Slime{
     plort: string | null;
     behavior: behaviorTypes | null | string;
     diet: dietTypes | null | string;
-    location: [locationFound];
+    location: locationFound[] | string[];
     favFood: Types.ObjectId | null | string;
     favToy: string | null;
 }
@@ -36,7 +36,7 @@ export interface Slime{
 export interface Food{
     name: string;
     type: dietTypes | null | string;
-    location: [locationFound];
+    location: locationFound[] | string[];
     growTime: number;
     harvetQuantity: number;
 }

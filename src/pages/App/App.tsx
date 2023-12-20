@@ -21,7 +21,7 @@ export default function App() {
     <main>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="/slimes" element={<AllSlimePage/>}/>
+        <Route path="/slimes" element={<AllSlimePage />}/>
         <Route path="/slimes/:id" element={<SlimePage/>}/>
         <Route path="/slimes/new" element={<NewSlimePage/>}/>
         <Route path="/foods" element={<AllFoodPage/>}/>
