@@ -5,7 +5,7 @@ const BASE_URL = "/api/slimes";
 //method get by defualt
 
 // Get all slimes
-export function getAll(): Promise<any> {
+export function getAllSlime(): Promise<any> {
     return sendRequest(BASE_URL);
 }
 
@@ -20,7 +20,7 @@ export function createSlime(NewSlimeData: any): Promise<any> {
 }
 
 // Update slime
-export function update(formData: { _id: string }): Promise<any> {
+export function updateSlime(formData: { _id: string }): Promise<any> {
     return sendRequest(`${BASE_URL}/${formData._id}`, "PUT", formData);
 }
 

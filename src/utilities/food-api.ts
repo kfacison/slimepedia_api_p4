@@ -4,7 +4,7 @@ const BASE_URL = "/api/foods";
 //method get by defualt
 
 // Get all foods
-export function getAll(): Promise<any> {
+export function getAllFood(): Promise<any> {
     return sendRequest(BASE_URL);
 }
 
@@ -19,7 +19,7 @@ export function createFood(food: { _id?: string }): Promise<any> {
 }
 
 // Update food
-export function update(formData: { _id: string }): Promise<any> {
+export function updateFood(formData: { _id: string }): Promise<any> {
     return sendRequest(`${BASE_URL}/${formData._id}`, "PUT", formData);
 }
 

@@ -3,7 +3,7 @@ import Slime from "../../models/slime";
 import Food from "../../models/food";
 import * as Types from "../../types/types";
 
-export async function getAll(req: Request, res: Response): Promise<void> {
+export async function getAllSlime(req: Request, res: Response): Promise<void> {
     try {
         const allSlimesInfo = await Slime.find({},{_id:1, name:1});
         // console.log(allSlimesInfo);
@@ -16,10 +16,8 @@ export async function getAll(req: Request, res: Response): Promise<void> {
 
 export async function deleteSlime(req: Request<{id: string}>, res: Response): Promise<void> {
     try {
-        const slimeInfo = await Slime.findOne({ _id: req.params.id });
-        const allSlimes = await Slime.updateMany({});
-        await Slime.findOneAndDelete({ _id: req.params.id });
-        res.json(allSlimes);
+        const slimeInfo = await Slime.findOneAndDelete({ _id: req.params.id });
+        res.json(slimeInfo);
     } catch (error) {
         res.status(500).json(error);
     }
@@ -27,7 +25,7 @@ export async function deleteSlime(req: Request<{id: string}>, res: Response): Pr
 
 //make Types.Slime
 
-// export async function update(req: Request, res: Response): Promise<void> {
+// export async function updateSlime(req: Request, res: Response): Promise<void> {
 //     try {
 //         const slime:Types.Slime | null = await Slime.findOne({ _id: req?._id });
         

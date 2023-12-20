@@ -17,7 +17,7 @@ export default function AllSlimePage(){
     useEffect(() => {
         async function GetAllSlime() {
             try{
-                const AllSlimeInfo = await slimeApi.getAll();
+                const AllSlimeInfo = await slimeApi.getAllSlime();
                 setAllSlimes(AllSlimeInfo);
                 
             }catch(error){

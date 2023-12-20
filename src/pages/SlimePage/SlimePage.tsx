@@ -1,11 +1,12 @@
 import './SlimePage.css';
-import { Link,useParams } from "react-router-dom";
+import { Link,useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import * as slimeApi from '../../utilities/slime-api';
 import * as Types from '../../../types/types';
 
 
 export default function SlimePage(){
+    const navigate = useNavigate();
     let { id } = useParams();
     const [slimeInfo, setSlimeInfo] = useState<Types.Slime>({
         name: "",
@@ -31,6 +32,17 @@ export default function SlimePage(){
         GetSlimeInfo();
         },[]);
 
+        async function handleDelete() {
+            if (window.confirm("Are you sure you want to delete this?")) {
+              // delete it!
+                console.log('it was clicked')
+                const d = await slimeApi.deleteSlime(id);
+                navigate("/slimes");
+            } else {
+              // Do nothing!
+            }
+        }
+
     return (
         <>
         <div className='SlimeInfo'>
@@ -53,6 +65,12 @@ export default function SlimePage(){
 
         <h3 className='SlimeInfoHeader'>favToy</h3>
         <p className='SlimeInfoBody'>{`${slimeInfo.favToy}`}</p>
+
+        <Link to={"/slimes/"+id+"/edit"}>Edit Slime</Link>
+
+        <button className="deleteSlimeButton" onClick={handleDelete}>
+            Delete Profile
+        </button>
         </div>
         </>
     );

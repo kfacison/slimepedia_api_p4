@@ -1,8 +1,8 @@
 /* SlimeInfo
 SlimeInfoHeader
 SlimeInfoBody
+deleteSlimeButton
 */
-.SlimeInfo>*{
+.SlimeInfo > *{
 height: 50px;
-
 }
