@@ -1,4 +1,5 @@
-import { FormData } from '../../interface/types';
+import { Request, Response } from "express";
+// import { FormData } from "../../types/types"
 
 export default async function sendRequest(
     url: string,
@@ -16,7 +17,6 @@ export default async function sendRequest(
         }
     }
     const res = await fetch(url, options);
-
     if (res.ok) {
     return res.json();
     }

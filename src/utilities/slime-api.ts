@@ -1,4 +1,5 @@
 import sendRequest from "./send-request"
+import * as Types from "../../types/types"
 
 const BASE_URL = "/api/slimes";
 //method get by defualt
@@ -14,8 +15,8 @@ export function getSlime(slime: { _id?: string }): Promise<any> {
 }
 
 // Create a slime
-export function createSlime(slime: { _id?: string }): Promise<any> {
-    return sendRequest(`${BASE_URL}`, "POST");
+export function createSlime(NewSlimeData: any): Promise<any> {
+    return sendRequest(`${BASE_URL}/`, "POST", NewSlimeData);
 }
 
 // Update slime

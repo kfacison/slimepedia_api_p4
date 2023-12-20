@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { Food, dietTypes, locationFound } from '../interface/types';
+import { Food, dietTypes, locationFound } from '../types/types';
 
 const foodSchema = new Schema<Food>({
     name: { 
@@ -20,4 +20,4 @@ const foodSchema = new Schema<Food>({
     timestamps: true
 })
 
-module.exports = model("Food", foodSchema);
+export default model("Food", foodSchema);

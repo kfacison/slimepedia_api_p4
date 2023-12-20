@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { Slime, behaviorTypes, dietTypes, locationFound } from '../interface/types';
+import { Slime, behaviorTypes, dietTypes, locationFound } from '../types/types';
 
 const slimeSchema = new Schema<Slime>({
     name: { 
@@ -28,4 +28,4 @@ const slimeSchema = new Schema<Slime>({
     timestamps: true
 })
 
-module.exports = model("Slime", slimeSchema);
+export default model('Slime', slimeSchema);

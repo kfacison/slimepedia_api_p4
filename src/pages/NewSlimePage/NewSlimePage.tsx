@@ -1,8 +1,10 @@
 import './NewSlimePage.css';
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import * as slimeApi from '../../utilities/slime-api';
 
 export default function NewSlimePage(){
+    const navigate = useNavigate();
     const allLocations: {placeName: string} []= [
         {placeName : 'Dry Reef'},
         {placeName:'Indigo Quarry',},
@@ -31,19 +33,19 @@ export default function NewSlimePage(){
                 newArry.push(allLocations[index].placeName)
             }
             })
-        console.log(newArry)
+        // console.log(newArry)
         const newFormData = { ...formData, location: newArry};
         setFormData(newFormData);
-        console.log(formData);
+        // console.log(formData);
     },[checkedState, setCheckedState]);
 
     async function handleChange(evt: any) {
         if(evt.target.name === 'location'){
-            console.log(evt.target.value);
+            // console.log(evt.target.value);
             const updatedCheckedState = checkedState.map((item: any, index: number) => {
                 return index == evt.target.value ? !item : item;
             });
-            console.log(updatedCheckedState);
+            // console.log(updatedCheckedState);
             setCheckedState(updatedCheckedState);
         }
         else{
@@ -54,12 +56,13 @@ export default function NewSlimePage(){
     
     async function handleSubmit(evt: any) {
         evt.preventDefault();
-    
-        const NewSlimeData = formData;
-        
-    
         try {
-            
+            const NewSlimeData = formData;
+            console.log(NewSlimeData);
+            const newSlime = await slimeApi.createSlime(NewSlimeData);
+            console.log(newSlime);
+            // return navigate("/slimes/" + newSlime._id);
+            return navigate("/slimes/");
         } catch (error) {
             console.error("Error during form submission", error);
         }
@@ -148,16 +151,13 @@ export default function NewSlimePage(){
 
         <div>
             <label htmlFor="favFood">Favorite Food:</label>
-            <select
+            <input
+                type='text'
                 id="favFood"
                 name="favFood"
                 value={formData.favFood}
                 onChange={handleChange}
-            >
-                {/* based on the diet type the options should be all that posible foods in that catigory */}
-                {/* map() for every food that is returned in a api of get food catigoty */}
-                <option value="other">Other</option>
-            </select>
+            />
         </div>
 
         <div>

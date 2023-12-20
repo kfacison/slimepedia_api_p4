@@ -25,20 +25,21 @@ export enum locationFound{
 
 export interface Slime{
     name: string;
-    plort: string;
-    behavior: behaviorTypes;
-    diet: dietTypes;
+    plort: string | null;
+    behavior: behaviorTypes | null | string;
+    diet: dietTypes | null | string;
     location: [locationFound];
-    favFood: Types.ObjectId;
-    favToy: string;
+    favFood: Types.ObjectId | null | string;
+    favToy: string | null;
 }
 
 export interface Food{
     name: string;
-    type: dietTypes;
+    type: dietTypes | null | string;
     location: [locationFound];
     growTime: number;
     harvetQuantity: number;
 }
+
 
 export type FormData = Slime | Food | string | null;
