@@ -5,7 +5,7 @@
 
 .slimeForm{
     width: 600px;
-    margin-top: 50px;
+    margin: 20px 150px 0 150px;
     padding: 0 70px 50px 70px;
     display: flex;
     flex-direction: column;

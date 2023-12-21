@@ -53,7 +53,7 @@ export default function EditSlimePage(){
                 const myPromise = new Promise((resolve, reject) => {
                     // Asynchronous code here
                     setFormData(slimeInfo)
-                    console.log("its set");
+                    // console.log("its set");
                 });
                 myPromise.then(()=>{});
                 // myPromise.then(()=>{SetLocationArry()});
@@ -72,15 +72,15 @@ export default function EditSlimePage(){
         async function SetLocationArry() {
                 // if allLocatiom[index].placeName is in slimeInfo.Locations then checkedState[idx] is true
                 allLocations.forEach((place, index)=>{
-                    console.log(formData.location);
-                    console.log(place.placeName);
+                    // console.log(formData.location);
+                    // console.log(place.placeName);
                     if( formData.location.includes(place.placeName)){
-                        console.log("it was there")
+                        // console.log("it was there")
                         checkedState[index] = true;
                         
                     }
                     else{
-                        console.log("rip")
+                        // console.log("rip")
                     }
                     return
                 });
@@ -121,9 +121,9 @@ export default function EditSlimePage(){
         evt.preventDefault();
         try {
             const EditSlimeData = formData;
-            console.log(EditSlimeData);
+            // console.log(EditSlimeData);
             const editSlime = await slimeApi.updateSlime(EditSlimeData);
-            console.log(editSlime);
+            // console.log(editSlime);
             return navigate("/slimes/" + editSlime._id);
         } catch (error) {
             console.error("Error during form submission", error);

@@ -4,7 +4,7 @@ deleteSlimeButton
 */
 .SlimeInfo{
     width: 600px;
-    margin-top: 50px;
+    margin: 20px 150px 0 150px;
     padding: 0 70px 50px 70px;
     display: flex;
     flex-direction: column;
@@ -46,7 +46,8 @@ deleteSlimeButton
 .deleteSlimeButton{
     width: 130px;
     height: 50px;
-    border-radius:  20px 20px 30px 30px;
+    border-radius: 30px 30px 20px 20px;
+    /* border-radius:  20px 20px 30px 30px; */
     border: 2px solid white;
     margin: 10px;
     background-color:white ;

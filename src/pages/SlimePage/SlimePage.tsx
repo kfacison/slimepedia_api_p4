@@ -35,7 +35,7 @@ export default function SlimePage(){
         async function handleDelete() {
             if (window.confirm("Are you sure you want to delete this?")) {
               // delete it!
-                console.log('it was clicked')
+                // console.log('it was clicked')
                 const d = await slimeApi.deleteSlime(id);
                 navigate("/slimes");
             } else {

@@ -27,11 +27,10 @@ export async function deleteSlime(req: Request<{id: string}>, res: Response): Pr
 
 export async function updateSlime(req: Request, res: Response): Promise<void> {
     try {
-        console.log(`this is REQ.PRAMSE${req.params.id}`)
-        console.log(req.body)
+        // console.log(req.body)
         // const slime:Types.Slime | null = await Slime.findOneAndUpdate({ _id: req?.params._id }, req.body);
         const editSlime = await Slime.findOne({ _id: req?.params.id });
-        console.log(editSlime)
+        // console.log(editSlime)
         
         editSlime!.name = req.body.name;
         editSlime!.plort = req.body.plort;
@@ -61,7 +60,7 @@ export async function getSlime(req: Request<{id: string}> , res: Response): Prom
 
         const slime = await Slime.findOne({ _id: req.params.id });
         // const slime = await Slime.findOne({ _id: req.params.id }).populate('food');
-        console.log(slime)
+        // console.log(slime)
         res.json(slime);
 
     } catch (error) {

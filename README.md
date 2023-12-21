@@ -45,7 +45,7 @@ API For the Dev to track slime and food info form Slime Rancher.
 ![Edit Page](assets/EditPage.png)
 
 ## User Stories
-* As a user I want to be able to see a list of all Slimes/food in the database
+* As a user I want to be able to see a list of all Slimes/Food in the database
 * As a user I want to see the info of a Slime/Food
 * As a user I want to CRUD Slimes/Food
 
@@ -83,3 +83,4 @@ API For the Dev to track slime and food info form Slime Rancher.
 ## Maybe Roadblocks
 * Feature creep
 * Route mix up
+* API Concepts

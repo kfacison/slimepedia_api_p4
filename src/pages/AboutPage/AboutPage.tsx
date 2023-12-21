@@ -5,7 +5,7 @@ export default function AboutPage(){
         <>
         <div className='AboutPage'>
         <h2 className='AboutHeader'>About</h2>
-        <a className='GitHubLink' href='https://github.com/kfacison/slimepedia_api_p4'>GitHub Repo</a>
+        <a className='GitHubLink' target="_blank" rel="noreferrer" href='https://github.com/kfacison/slimepedia_api_p4'>GitHub Repo</a>
         </div>
         </>
     );

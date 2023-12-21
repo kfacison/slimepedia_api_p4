@@ -8,3 +8,28 @@
 .aboutHeader{
     margin-bottom: 50px;
 }
+
+.aboutLink{
+    width: 110px;
+    height: 30px;
+    border-radius: 30px 30px 20px 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 20px 10px 20px 10px;
+    background-color:white ;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    align-items: center;
+}
+
+.aboutLink:hover{
+    background-color:#0d6ba0 ;
+    color: white;
+}
+.aboutLink:active{
+    background-color: #3e218b;
+    color: white;
+}
