@@ -69,6 +69,7 @@ export default function NewSlimePage(){
 
     return (
         <>
+        <div>
         <h2>New Slime Page</h2>
         <form autoComplete="off" onSubmit={handleSubmit}  className='slimeForm'>
         <div className='formName'>
@@ -80,7 +81,7 @@ export default function NewSlimePage(){
                 required
                 value={formData.name}
                 onChange={handleChange}
-            />
+                />
         </div>
 
         <div className='formPlort'>
@@ -92,7 +93,7 @@ export default function NewSlimePage(){
                 autoComplete="off"
                 value={formData.plort}
                 onChange={handleChange}
-            />
+                />
         </div>
 
         <div className='formBehavior'>
@@ -102,7 +103,7 @@ export default function NewSlimePage(){
                 name="behavior"
                 value={formData.behavior}
                 onChange={handleChange}
-            >
+                >
                 <option value="docile">Docile</option>
                 <option value="harmful">Harmful</option>
                 <option value="special">Special</option>
@@ -117,7 +118,7 @@ export default function NewSlimePage(){
                 name="diet"
                 value={formData.diet}
                 onChange={handleChange}
-            >
+                >
                 <option value="fruit">Fruit</option>
                 <option value="veggies">Veggies</option>
                 <option value="meat">Meat</option>
@@ -156,7 +157,7 @@ export default function NewSlimePage(){
                 name="favFood"
                 value={formData.favFood}
                 onChange={handleChange}
-            />
+                />
         </div>
 
         <div className='formFavToy'>
@@ -168,7 +169,7 @@ export default function NewSlimePage(){
                 autoComplete="off"
                 value={formData.favToy}
                 onChange={handleChange}
-            />
+                />
         </div>
 
         <div>
@@ -176,6 +177,7 @@ export default function NewSlimePage(){
         </div>
 
         </form>
+        </div>
         </>
     );
 }

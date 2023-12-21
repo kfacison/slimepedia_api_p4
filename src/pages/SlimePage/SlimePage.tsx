@@ -46,27 +46,39 @@ export default function SlimePage(){
     return (
         <>
         <div className='SlimeInfo'>
-        <h2>{`${slimeInfo.name} slime page`}</h2>
+        <h2 className='SlimeInfoMainHeader'>{`${slimeInfo.name} Slime`}</h2>
 
-        <h3 className='SlimeInfoHeader'>Plort</h3>
-        <p className='SlimeInfoBody'>{`${slimeInfo.plort} plort`}</p>
+        <p className='SlimeInfoBody'>
+        <span className='SlimeInfoHeader'>Plort</span><br/>
+            {`${slimeInfo.plort} plort`}
+        </p>
 
-        <h3 className='SlimeInfoHeader'>behavior</h3>
-        <p className='SlimeInfoBody'>{`${slimeInfo.behavior}`}</p>
+        <p className='SlimeInfoBody'>
+        <span className='SlimeInfoHeader'>Behavior</span><br/>
+            {`${slimeInfo.behavior}`}
+        </p>
 
-        <h3 className='SlimeInfoHeader'>diet</h3>
-        <p className='SlimeInfoBody'>{`${slimeInfo.diet}`}</p>
+        <p className='SlimeInfoBody'>
+        <span className='SlimeInfoHeader'>Diet</span><br/>
+            {`${slimeInfo.diet}`}
+        </p>
 
-        <h3 className='SlimeInfoHeader'>location</h3>
-        <p className='SlimeInfoBody'>{`${slimeInfo.location}`}</p>
+        <p className='SlimeInfoBody'>
+        <span className='SlimeInfoHeader'>Location</span><br/>
+            {`${slimeInfo.location}`}
+        </p>
 
-        <h3 className='SlimeInfoHeader'>favFood</h3>
-        <p className='SlimeInfoBody'>{`${slimeInfo.favFood?slimeInfo.favFood : "None"}`}</p>
+        <p className='SlimeInfoBody'>
+        <span className='SlimeInfoHeader'>Favorite Food</span><br/>
+            {`${slimeInfo.favFood?slimeInfo.favFood : "None"}`}
+        </p>
 
-        <h3 className='SlimeInfoHeader'>favToy</h3>
-        <p className='SlimeInfoBody'>{`${slimeInfo.favToy}`}</p>
+        <p className='SlimeInfoBody'>
+        <span className='SlimeInfoHeader'>Favorite Toy</span><br/>
+            {`${slimeInfo.favToy}`}
+        </p>
 
-        <Link to={"/slimes/"+id+"/edit"}>Edit Slime</Link>
+        <Link to={"/slimes/"+id+"/edit"} className='EditLink'>Edit Slime</Link>
 
         <button className="deleteSlimeButton" onClick={handleDelete}>
             Delete Profile

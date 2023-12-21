@@ -1,0 +1,49 @@
+.NewSlimePage{
+    display: flex;
+    flex-direction: column;
+}
+
+.slimeForm{
+    width: 600px;
+    margin-top: 50px;
+    padding: 0 70px 50px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100px 100px 30px 30px;
+    border: 2px solid white;
+    justify-content: center;
+}
+
+.slimeForm>*{
+    padding: 20px;
+}
+
+.slimeFormHeader{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.formButton{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px 30px 20px 20px;
+    border: 2px solid white;
+    margin: 10px;
+    background-color:white ;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    align-items: center;
+}
+
+.formButton:hover{
+    background-color:#0d6ba0 ;
+    color: white;
+}
+.formButton:active{
+    background-color: #3e218b;
+    color: white;
+}

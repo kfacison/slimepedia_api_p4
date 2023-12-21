@@ -2,9 +2,9 @@ import './AllFoodPage.css';
 
 export default function AllFoodPage(){
     return (
-        <>
-        <h2>all food page</h2>
+        <div className='AllFoodPage'>
+        <h2>All Food</h2>
         <p>work in progress</p>
-        </>
+        </div>
     );
 }

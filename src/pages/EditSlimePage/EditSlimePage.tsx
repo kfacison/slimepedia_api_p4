@@ -132,7 +132,8 @@ export default function EditSlimePage(){
 
     return (
         <>
-        <h2>Edit Slime Page</h2>
+        <div className='NewSlimePage'>
+        <h2 className='slimeFormHeader'>Edit Slime Page</h2>
         <form autoComplete="off" onSubmit={handleSubmit}  className='slimeForm'>
         <div className='formName'>
             <label htmlFor="name">Name:</label>
@@ -143,7 +144,7 @@ export default function EditSlimePage(){
                 required
                 value={formData.name}
                 onChange={handleChange}
-            />
+                />
         </div>
 
         <div className='formPlort'>
@@ -155,7 +156,7 @@ export default function EditSlimePage(){
                 autoComplete="off"
                 value={formData.plort}
                 onChange={handleChange}
-            />
+                />
         </div>
 
         <div className='formBehavior'>
@@ -165,7 +166,7 @@ export default function EditSlimePage(){
                 name="behavior"
                 value={formData.behavior}
                 onChange={handleChange}
-            >
+                >
                 <option value="docile">Docile</option>
                 <option value="harmful">Harmful</option>
                 <option value="special">Special</option>
@@ -200,21 +201,21 @@ export default function EditSlimePage(){
 
                     {/* <input type="checkbox" name="location" value={0} />
                     <label htmlFor="dryReef">Dry Reef</label>
-                
+                    
                     <input type="checkbox" name="location" value={1} />
                     <label htmlFor="indigoQuarry">Indigo Quarry</label>
-
+                    
                     <input type="checkbox" name="location" value={2} />
                     <label htmlFor="mossBlanket">Moss Blanket</label>
-                
+                    
                     <input type="checkbox" name="location" value={3} />
                     <label htmlFor="ancientRuins">Ancient Ruins</label>
-                
+                    
                     <input type="checkbox" name="location" value={4} />
                     <label htmlFor="glassDesert">Glass Desert</label>
-                
+                    
                     <input type="checkbox" name="location" value={5} />
-                    <label htmlFor="other">Other</label> */}
+                <label htmlFor="other">Other</label> */}
             </fieldset>
         </div>
 
@@ -226,7 +227,7 @@ export default function EditSlimePage(){
                 name="favFood"
                 value={formData.favFood}
                 onChange={handleChange}
-            />
+                />
         </div>
 
         <div className='formFavToy'>
@@ -238,14 +239,15 @@ export default function EditSlimePage(){
                 autoComplete="off"
                 value={formData.favToy}
                 onChange={handleChange}
-            />
+                />
         </div>
 
         <div>
-            <button type="submit" className='formButton'>Confirm Slime Edits</button>
+            <button type="submit" className='formButton'>Confirm Edits</button>
         </div>
 
         </form>
+        </div>
         </>
     );
 }
