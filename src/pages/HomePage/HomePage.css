@@ -1,0 +1,10 @@
+.HomePage{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutHeader{
+    margin-bottom: 50px;
+}

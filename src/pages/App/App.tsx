@@ -1,6 +1,5 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import { useState } from 'react';
 import NavBar from "../../components/NavBar/NavBar";
 import HomePage from '../HomePage/HomePage';
 import AllSlimePage from '../AllSlimePage/AllSlimePage';
@@ -16,11 +15,8 @@ import AboutPage from '../AboutPage/AboutPage';
 
 export default function App() {
   return (
-    <div>
-      <nav>
+    <main className='App'>
       <NavBar />
-      </nav>
-    <main>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/slimes" element={<AllSlimePage />}/>
@@ -33,8 +29,6 @@ export default function App() {
         <Route path="/foods/:id/edit" element={<EditFoodPage/>}/>
         <Route path="/about" element={<AboutPage/>}/>
       </Routes>
-
     </main>
-    </div>
   );
 }

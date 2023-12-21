@@ -1,6 +1,6 @@
 import './EditSlimePage.css';
 import { useState, useEffect } from "react";
-import { useNavigate,useParams,Link } from "react-router-dom";
+import { useNavigate,useParams } from "react-router-dom";
 import * as slimeApi from '../../utilities/slime-api';
 
 export default function EditSlimePage(){

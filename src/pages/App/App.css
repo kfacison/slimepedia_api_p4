@@ -1,17 +1,8 @@
-div >*{
+.App{
   display: flex; 
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  padding: 0 0;
+  flex-direction: row;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  background-color: #f8738d;
 }
 
-main{
-  border: 2px solid red;
-}
-
-nav{
-  border: 2px solid blue;
-  width: 25vw;
-  height: 100%;
-}

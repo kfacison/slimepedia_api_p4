@@ -1,7 +1,9 @@
+import './AboutPage.css';
+
 export default function AboutPage(){
     return (
-        <h2>
-            about page
-        </h2>
+        <>
+        <h2>about page</h2>
+        </>
     );
 }

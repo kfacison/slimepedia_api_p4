@@ -1,11 +1,60 @@
-.allSlime > *{
-    height: 100px;
-    width: 100%;
-    border: 2px solid purple;
-    display: flex; 
+.allSlime{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* newSlimeLink */
+.allSlimeHeader{
+    margin-bottom: 80px;
+}
+.allSlime > *{
+    justify-content: center;
+    display: flex;
+}
+.SlimeLink{
+    width: 130px;
+    height: 75px;
+    border-radius: 30px 30px 20px 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 25px 10px;
+    background-color:white ;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    align-items: center;
+}
 
+.SlimeLink:hover{
+    background-color:#0d6ba0 ;
+    color: white;
+}
+.SlimeLink:active{
+    background-color: #3e218b;
+    color: white;
+}
 
-/* SlimeLink */
+.newSlimeLink{
+    border-radius: 30px 30px 20px 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 25px 10px;
+    background-color:white ;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.newSlimeLink:hover{
+    background-color:#0d6ba0 ;
+    color: white;
+}
+.newSlimeLink:active{
+    background-color: #3e218b;
+    color: white;
+}
