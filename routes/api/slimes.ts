@@ -15,7 +15,7 @@ router.get("/", slimeCtrl.getAllSlime);
 router.post("/", slimeCtrl.createSlime);
 
 // PUT /api/slimes/:id -- Update slime
-// router.put("/:id",slimeCtrl.updateSlime);
+router.put("/:id",slimeCtrl.updateSlime);
 
 // DELETE /api/slimes/:id -- Delete slime
 router.delete("/:id", slimeCtrl.deleteSlime);

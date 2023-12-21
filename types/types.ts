@@ -41,5 +41,9 @@ export interface Food{
     harvetQuantity: number;
 }
 
+export interface EditFormData extends Slime{
+    _id: string
+}
 
-export type FormData = Slime | Food | string | null;
+export type FormData = Slime | Food | string | null | EditFormData;
+export type UpdateFormData = EditFormData;

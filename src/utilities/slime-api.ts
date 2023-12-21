@@ -20,8 +20,8 @@ export function createSlime(NewSlimeData: any): Promise<any> {
 }
 
 // Update slime
-export function updateSlime(formData: { _id: string }): Promise<any> {
-    return sendRequest(`${BASE_URL}/${formData._id}`, "PUT", formData);
+export function updateSlime(EditSlimeData: any): Promise<any> {
+    return sendRequest(`${BASE_URL}/${EditSlimeData._id}`, "PUT", EditSlimeData);
 }
 
 // Delete slime

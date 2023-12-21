@@ -25,24 +25,36 @@ export async function deleteSlime(req: Request<{id: string}>, res: Response): Pr
 
 //make Types.Slime
 
-// export async function updateSlime(req: Request, res: Response): Promise<void> {
-//     try {
-//         const slime:Types.Slime | null = await Slime.findOne({ _id: req?._id });
+export async function updateSlime(req: Request, res: Response): Promise<void> {
+    try {
+        console.log(`this is REQ.PRAMSE${req.params.id}`)
+        console.log(req.body)
+        // const slime:Types.Slime | null = await Slime.findOneAndUpdate({ _id: req?.params._id }, req.body);
+        const editSlime = await Slime.findOne({ _id: req?.params.id });
+        console.log(editSlime)
         
-//         slime?.name = req.body.name || slime.name || null;
-//         slime?.plort = req.body.plort || slime.plort;
-//         slime?.behavior = req.body.behavior || slime.behavior;
-//         slime?.diet = req.body.diet || slime.diet;
-//         slime?.location = req.body.location || slime.location;
-//         slime?.favFood = req.body.favFood || slime.favFood;
-//         slime?.favToy = req.body.favToy || slime.favToy;
+        editSlime!.name = req.body.name;
+        editSlime!.plort = req.body.plort;
+        editSlime!.behavior = req.body.behavior;
+        editSlime!.diet = req.body.diet;
+        editSlime!.location = req.body.location;
+        editSlime!.favFood = req.body.favFood;
+        editSlime!.favToy = req.body.favToy;
         
-//         await slime.save();
-//         res.json(slime);
-//     } catch (error) {
-//         res.status(500).send("Error updating slime");
-//     }
-// }
+        const FF = await Food.findOne({name: req.body.favFood});
+        if (FF){
+            editSlime!.favFood = FF._id;
+        }
+        else{
+            editSlime!.favFood = null;
+        }
+
+        await editSlime!.save();
+        res.json(editSlime);
+    } catch (error) {
+        res.status(500).send("Error updating slime");
+    }
+}
 
 export async function getSlime(req: Request<{id: string}> , res: Response): Promise<void> {
     try {
